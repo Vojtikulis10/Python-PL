@@ -93,39 +93,111 @@
 # canvas.create_rectangle(0,180,400,300,fill='green')
 # canvas.mainloop()
 
-#cv08 den_noc3.py
-import random
+#cv08 a 09 den_noc3.py
+# import random
+# import tkinter
+# canvas = tkinter.Canvas()
+# canvas.pack()
+
+# x=random.randint(100,300)
+# y=random.randint(100,200)
+# r=50
+# # cas= int(input("Kolik je hodin:"))
+# cas= random.randint(0,16)
+# if cas < 8:
+#     canvas.create_rectangle(0,0,400,300,fill='navy')
+#     canvas.create_oval(x-r, y-r,x+r,y+r, fill="white")
+# else:
+#     canvas.create_rectangle(0,0,400,300,fill='cyan')
+#     canvas.create_oval(x-r, y-r,x+r,y+r, fill="yellow")
+# canvas.create_rectangle(0,180,400,300,fill='green')
+# canvas.mainloop()
+
+##cv10 
+# for i in range(8):
+#  print(i, 'ještě spím')
+# for i in range(6):
+#  print(8 + i, 'jsem ve škole')
+
+##cv11 chudy_bohaty.py
+# for i in range(0,91,10):
+#     if i < 50:
+#         print('Mám', i, 'korun, jsem chudý')
+#     else:
+#         print('Mám', i , 'korun, jsem bohatý')
+
+#cv12 nasobky_peti.py
+
+# for n in range(11):
+#     n2 = n * n
+#     n = 5 * n
+#     if n2 < n:
+#         print(n2, "je menší než", n)
+#     else:
+#         print(n2, "je větší nebo rovno", n)
+
+#cv13 koralky_na_niti.py
+
+# import random
+# import tkinter
+# canvas = tkinter.Canvas(width=700, height=150)
+# canvas.pack()
+
+# x=50
+# y=75
+# r=20
+
+# for i in range(15):
+#     if i < 8:
+#         canvas.create_oval(x-r, y-r,x+r,y+r, fill="red")
+#         x=x+2*r
+#     else:
+#         canvas.create_oval(x-r, y-r,x+r,y+r, fill="blue")
+#         x=x+2*r
+
+# canvas.mainloop()
+
+#cv14 koralky_na_niti.py
+
+# import random
+# import tkinter
+# canvas = tkinter.Canvas(width=700, height=150)
+# canvas.pack()
+
+# x=50
+# y=75
+# r=20
+
+# for i in range(15):
+#     if i < 8:
+#         canvas.create_oval(x-r, y-r,x+r,y+r, fill=random.choice(['red', 'yellow']))
+#         x=x+2*r
+#     else:
+#         canvas.create_oval(x-r, y-r,x+r,y+r, fill=random.choice(['blue', 'green']))
+#         x=x+2*r
+
+# canvas.mainloop()
+
+#cv15 rozsypane_koralky.py
+
 import tkinter
-canvas = tkinter.Canvas()
+import random
+
+canvas = tkinter.Canvas(width=400, height=300)
 canvas.pack()
 
-x=random.randint(100,300)
-y=random.randint(100,200)
-r=50
-# cas= int(input("Kolik je hodin:"))
-cas= random.randint(0,16)
-if cas < 8:
-    canvas.create_rectangle(0,0,400,300,fill='navy')
-    canvas.create_oval(x-r, y-r,x+r,y+r, fill="white")
-else:
-    canvas.create_rectangle(0,0,400,300,fill='cyan')
-    canvas.create_oval(x-r, y-r,x+r,y+r, fill="yellow")
-canvas.create_rectangle(0,180,400,300,fill='green')
+r = 10
+
+def koralek():
+    x = random.randint(r, 400-r)
+    y = random.randint(r, 300-r)
+    if x < 200:
+        barva = random.choice(["red", "yellow"])
+    else:
+        barva = random.choice(["blue", "green"])
+    canvas.create_oval(x-r, y-r, x+r, y+r, fill=barva)
+
+for i in range(200):
+    koralek()
+
 canvas.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
